@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+
+# Préprocesseur pour inclure le contenu de fichiers dans un fichier
+
+import pathlib
+import sys
+
+def preprocesseur():
+    # Vérifier le nombre de paramètres
+    if len(sys.argv) < 2:
+        afficherUsage()
+    nom_intrant = sys.argv[1]
+    nom_extrant = nom_intrant + '.md'
+    # Vérifier que le fichier intrant existe, si oui, le traiter
+    if pathlib.Path(nom_intrant).is_file():
+        traiter(nom_intrant, nom_extrant)
+    else:
+        afficherUsage()
+
+def afficherUsage():
+    print("""
+    Ce programme génère un fichier Markdown en incluant
+    le contenu des fichiers spécifiés par les commandes
+    %inclure:nom_du_fichier_a_inclure
+    apparaissant dans le fichier intrant.
+
+    Par la suite, Pandoc génère le fichier pdf correspondant.
+
+    Le programme prend exactement un paramètre,
+    le nom du fichier intrant qui doit exister.
+
+    Le nom du fichier extrant est le nom du fichier intrant
+    auquel le suffixe '.md' est ajouté.
+    """)
+    exit(1)
+
+def traiter(nom_intrant, nom_extrant):
+    with open(nom_intrant, 'r') as intrant:
+        texte = intrant.readlines()
+    with open(nom_extrant, 'w') as extrant:
+        for ligne in texte:
+            if ligne.startswith('%inclure:'):
+                traiterInclusion(extrant, ligne)
+            else:
+                extrant.write(ligne)
+
+def traiterInclusion(extrant, commande):
+    sections = commande[:-1].split(':')
+    nom_fichier = sections[1]
+    ligne_debut = obtenirValeur(sections, 2, 1)
+    ligne_fin = obtenirValeur(sections, 3, 999999)
+    print(f'Inclusion de {nom_fichier} [{ligne_debut},{ligne_fin}]')
+    with open(nom_fichier, 'r') as fichier:
+        for i, ligne in enumerate(fichier.readlines(), 1):
+            if ligne_debut <= i <= ligne_fin:
+                extrant.write(ligne)
+
+def obtenirValeur(sections, indice, defaut):
+    if len(sections) > indice and len(sections[indice]):
+        valeur = int(sections[indice])
+    else:
+        valeur = defaut
+    return valeur
+
+if __name__ == '__main__':
+    preprocesseur()

@@ -1,0 +1,237 @@
+%
+%   Version du 2018-06-30 - Louis Martin
+%
+
+
+
+
+% Pour la prise en compte du français
+\usepackage[french]{babel}
+\frenchbsetup{og=«,fg=»}
+
+
+% Recto-verso
+\KOMAoptions{twoside=true}
+% Ouverture d'un nouveau chapitre : any, right, left -->
+\KOMAoptions{open=right}
+
+% Pour avoir tout en Times New Roman
+%\addtokomafont{disposition}{\rmfamily}
+%\addtokomafont{descriptionlabel}{\rmfamily}
+
+
+% Quelques autres paramètres
+\KOMAoptions{fontsize=11}
+\KOMAoptions{listof=totoc}
+\KOMAoptions{bibliography=totoc}
+\KOMAoptions{titlepage}
+\KOMAoptions{headings=small}
+\KOMAoptions{parskip=half}
+
+
+% Pour la gestion des couleurs
+\usepackage[]{xcolor}
+\def \couleur {\color{blue}}
+
+
+% Pour de longs tableaux
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+
+% Pour la couleur dans les tableaux
+% Voir https://texblog.org/2011/04/19/highlight-table-rowscolumns-with-color/
+\usepackage{colortbl}
+\definecolor{Gris}{gray}{0.9}
+%\def \couleurtable {Gris}
+\def \couleurtable {blue!15}
+
+
+% Pour controler le 'float' des tableaux
+\usepackage{float}
+
+
+% Pour permettre des tableaux plus complexes
+\usepackage{tabularx}
+
+
+% Pour que les hyperliens pointent vers le haut des figures
+\usepackage{caption}
+
+
+% Pour mettre les noms de chapitre en majuscule
+\makeatletter
+% Si on désire le titre des sections en majuscule, activer les trois prochaines lignes
+%\renewcommand\sectionlinesformat[4]{%
+%  \@hangfrom{\hskip#2 #3}{\MakeUppercase{#4}}%
+%}
+\renewcommand\chapterlinesformat[3]{%
+  \@hangfrom{#2}{\MakeUppercase{#3}}%
+}
+\makeatother
+\renewcommand\chapterlineswithprefixformat[3]{%
+  \MakeUppercase{#2#3}%
+}
+
+
+% Pour les citations
+\renewcommand*{\dictumwidth}{.50\textwidth}
+\renewcommand*{\dictumauthorformat}[1]{\bfseries #1}
+
+
+% Dimension des marges
+\usepackage[letterpaper,
+top=4cm,
+bottom=3cm,
+left=4cm,
+right=3cm]{geometry}
+
+
+% Voir https://tex.stackexchange.com/questions/70610/how-to-customize-the-page-header-and-the-page-number-of-classicthesis
+% Pagination en haut de la page
+\usepackage{scrlayer-scrpage}
+\clearscrheadfoot
+\rohead{\pagemark}
+\lehead{\pagemark}
+
+
+%Pour les entêtes de page
+\pagestyle{headings}
+\KOMAoptions{footsepline=false,headsepline=false}
+
+
+% Centrer et numéroter les chapitres
+\KOMAoption{chapterprefix}{true}
+\renewcommand*\raggedchapter{\centering}
+
+
+% Pour un verbatim plus complet
+\usepackage{fancyvrb}
+\RecustomVerbatimEnvironment{Verbatim}{Verbatim}{frame=lines,framesep=3mm,numbers=left,showspaces=false,fontsize=\small,rulecolor=\color{blue}}
+
+
+% Pour les logos associés à Tex
+\usepackage{hologo}
+
+
+% Pour représenter des clés de clavier
+\usepackage{menukeys}
+\renewmenumacro{\directory}[/]{pathswithblackfolder}
+\changemenucolor{blacknwhite}{txt}{named}{blue}
+
+
+% Pour les hors-textes
+\usepackage[tikz]{bclogo}
+\setlength{\logowidth}{12pt}
+\newcommand{\encadrer}[3]{\vspace{3mm}%
+	\begin{bclogo}[noborder=true,margeG=1,margeD=1,logo=\bctrombone,epBarre=0.5,couleurBarre=blue,sousTitre={\textbf{\couleur #2}}]{\couleur \sffamily ~#1}%
+	#3%
+	\end{bclogo}%
+}
+
+%Pour les rotations
+\usepackage{pdflscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+
+
+% Pour les structures de répertoire
+\usepackage{dirtree}
+
+
+% Pour contrôler les interlignes
+\usepackage{setspace}
+
+
+% Pour Lorem Ipsum
+\usepackage{lipsum}
+
+
+% Pour les todo
+\usepackage{todonotes}
+
+
+% Pour inclure des pages sous format pdf
+\usepackage{pdfpages}
+
+
+% Pour permettre de passer du mode portrait au mode paysage pour une figure
+\usepackage{rotating}
+
+
+% Pour modifier le libellé pour la liste des figures
+\renewcaptionname{french}{\listfigurename}{Liste des figures}
+
+
+%Pour modifier le libellé des tableaux
+\renewcaptionname{french}{\tablename}{Tableau}
+
+
+% Pour un logo à bas à gauche de chaque page
+\usepackage{eso-pic}
+%\AddToShipoutPictureBG{\AtPageLowerLeft{\put(30,30){\includegraphics[width=1.5cm]{images/logouqam.png}}}}
+
+
+% Pour un filigrane « version projet »
+% \usepackage{draftwatermark} % Pour un filigrane sur toutes les pages
+% \usepackage[firstpage]{draftwatermark} % Pour un filigrane sur la première page seulement
+\usepackage[nostamp]{draftwatermark} % Pour ne pas avoir de filigrane
+\SetWatermarkText{version projet}
+\SetWatermarkLightness{0.95} % Plus élevé donne plus pâle
+\SetWatermarkScale{0.8} % Défaut 1.2
+
+
+% Paramètres pour listing
+\lstset{
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={+}{{$$+$$}}1 {/}{{$$/$$}}1 {*}{{$$*$$}}1 {=}{{$$=$$}}1
+               {>}{{$$>$$}}1 {<}{{$$<$$}}1
+               {\\\\}{{\char`\\\char`\\}}1
+               {<-}{{$$\leftarrow$$}}2
+               {=>}{{$$\Rightarrow$$}}2
+               {>>}{{>>}}2 {>>=}{{>>=}}2
+               {|}{{$$\mid$$}}1
+               {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+               {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+               {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+               {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+               {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+               {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+               {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+               {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+               {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+               {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+               {€}{{\EUR}}1 {£}{{\pounds}}1 {λ}{{$$\lambda$$}}1,
+    basicstyle=\linespread{1.2}\ttfamily\small,
+    numbers=left,
+    keywordstyle=[1]\color[rgb]{0.13,0.29,0.53}\bfseries,
+    keywordstyle=[2]\color[rgb]{0.13,0.29,0.53}\bfseries,
+    keywordstyle=[3]\color[rgb]{0.00,0.50,0.00}\bfseries,
+    keywordstyle=[4]\color[rgb]{1.00,0.00,0.00}\bfseries,
+    stringstyle=\color[rgb]{0.31,0.60,0.02},
+    commentstyle=\color[rgb]{0.56,0.35,0.01}\itshape,
+    numberstyle=\footnotesize,
+    stepnumber=1,
+    numbersep=5pt,
+    numberstyle=\tiny,
+    numbers=none,
+    %backgroundcolor=\color[RGB]{248,248,248},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=true,
+    breakautoindent=true,
+    escapeinside={\%*}{*)},
+    linewidth=\textwidth,
+    basewidth=0.5em,
+    frame=lines,
+    rulecolor=\couleur,
+    aboveskip=1.5em,
+    belowskip=1.0em,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
