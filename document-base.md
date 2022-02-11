@@ -25,7 +25,7 @@ nocite: |
             \vfill
             par \break Oussama Chouk
             \vfill
-            Janvier 2022
+            Février 2022
         }
     }
     \end{center}

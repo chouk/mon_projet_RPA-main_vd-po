@@ -1,6 +1,6 @@
 # CADRE MÉTHODOLOGIQUE DE RECHERCHE
 
-Dans ce chapitre, nous allons présenter le cadre méthodologique de l’ensemble de la démarche. On se basera sur le travail de [@hevner_2007] comme source de référence pour atteindre nos objectifs escomptés. Nous allons tout d’abord présenter notre tableau méthodologique pour donner une idée sommaire sur les activités de notre recherche dans le contexte d’une activité de design science. On expliquera brièvement le processus actuel de vérification de revenues et les besoins d’automatisations de ce dernier. On dévoilera ensuite notre solution proposée, les obstacles courus, lors de la réalisation de cette solution et les approches prises pour les contournés.
+Dans ce chapitre, nous allons présenter le cadre méthodologique de l’ensemble de la démarche. On se basera sur le travail de [@hevner_2007] comme source de référence pour atteindre nos objectifs escomptés. Nous allons tout d’abord présenter notre tableau méthodologique pour donner une idée sommaire sur les activités de notre recherche dans le contexte d’une activité de design science. On expliquera brièvement le processus actuel de vérification de revenus et les besoins d’automatisations de ce dernier. On dévoilera ensuite notre solution proposée, les obstacles courus, lors de la réalisation de cette solution et les approches prises pour les contourner.
 \newpage
 
 ## Étapes de notre démarche
@@ -12,12 +12,12 @@ Dans ce chapitre, nous allons présenter le cadre méthodologique de l’ensembl
 
 ### Planification de notre recherche
 
-Nous avons défini au premier chapitre le contexte et les besoins qui nous poussent à innover et à résoudre des problèmes complexes. On a aussi effectué au chapitre 2 une revue de la littérature qui nous a éclairci sur fondements des RPA ainsi que l’expertise existante dans ce domaine.
+Nous avons défini au premier chapitre le contexte et les besoins qui nous poussent à innover et à résoudre des problèmes complexes. On a aussi effectué au chapitre 2 une revue de la littérature qui nous a éclaircis sur fondements des RPA ainsi que l’expertise existante dans ce domaine.
 
 Nous voulons réaliser une preuve de concept pour démontrer l’utilité d’un RPA dans la vérification de la cohérence des déclarations de revenus du demandeur de crédit hypothécaire, à partir des documents historiques fournis.
-Le but de ce travail est de réduire au maximum les délais de traitements des demandes de crédit tout en assurant une qualité d’analyse hors pair. Ces deux axes sont d’une importance majeure considérant la marge compétitive assez mince du marché hypothécaire. Les délais de traitement influencent directement la satisfaction des clients, la qualité des souscriptions et l’appétit au risque des demandes de crédit. 
+Le but de ce travail est de réduire au maximum les délais de traitements des demandes de crédit tout en assurant une qualité d’analyse hors pair. Ces deux axes sont d’une importance majeure considérant la marge compétitive assez mince du marché hypothécaire. Les délais de traitement influencent directement la satisfaction des clients, la qualité des souscriptions et la tolérance au risque des demandes de crédit. 
 
-Afin de quantifier la durée moyenne allouée pour le processus de vérification de l’exactitude des revenus, nous avons demandé un échantillon de cinq dossiers aléatoires par trois analystes. \break
+Afin de quantifier la durée moyenne allouée pour le processus de vérification de l’exactitude des revenus, nous avons demandé un échantillon de cinq dossiers aléatoires par trois analystes. \newpage
 Nous avons obtenu les résultats suivants :
 
 \begin{table}[h]
@@ -45,17 +45,19 @@ Nous avons obtenu les résultats suivants :
 \end{table}
 
 Nous savons déjà que tout le processus de confirmation de revenus en moyenne est de 18 minutes donc on peut conclure que la vérification manuelle des documents représente environ 85 % du sous-processus.
-Ces données ont été collectées auprès de 3 de nos 60 collègues, le traitement peut grandement varier d’un analyste de crédit à l’autre de par de son expérience. 
-Nous espérant réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité suivant: 
+Ces données ont été collectées auprès de 3 de nos 60 collègues, le traitement peut grandement varier d’un analyste de crédit à l’autre de par son expérience. 
+Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité suivant: 
 
 \begin{figure}[h]
   \includegraphics{images/Sous-ProcessusAAutomatisé.png}
   \caption{Sous-processus visé}
 \end{figure}
 
+\newpage
+
 ### Raffinement méthodologique
 
-Les trois plus grands fournisseurs de système RPA sont *Blue Prism*, *Automation Anywhere* et *UiPath*. Il existe aussi des compagnies récentes sur le marché, de sérieux concurrents, comme NICE et Pegasystems, sans oublier les solutions de logiciels libres comme Robot Framework, Robocorp, TagUI etc. Chaque solution vient avec sa liste d’avantages et inconvénients. Certaines requirent de bonnes connaissances de langages de programmation, exemple : C#, d’autres requièrent un minimum de code possible.
+Les trois plus grands fournisseurs de système RPA sont *Blue Prism*, *Automation Anywhere* et *UiPath*. Il existe aussi des compagnies récentes sur le marché, de sérieux concurrents, comme NICE et Pegasystems, sans oublier les solutions de logiciels libres comme Robot Framework, Robocorp, TagUI etc. Chaque solution vient avec sa liste d’avantages et inconvénients. Certaines requièrent de bonnes connaissances de langages de programmation, exemple : C#, d’autres requièrent un minimum de code possible.
 À cette étape, nous allons comparer les solutions RPA existantes pour définir une liste d’avantages et inconvénients, puis nous sélectionnerons les solutions qui conviennent au mieux à nos objectifs de recherches. Nous nous limiterons dans le cadre de cette recherche aux trois premières compagnies du classement de Gartner  comme solutions payantes et Robot Framework  comme solution de logiciel libre.
 
 Considérant les enjeux de sécurité importants pour les documents de revenus personnels des clients, nous allons créer un cadre de développement virtuel *sandbox*. Le but est de créer un répertoire infonuagique dans lequel on va stocker des preuves de revenus fictives.
