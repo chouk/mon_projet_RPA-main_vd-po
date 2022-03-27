@@ -1,6 +1,6 @@
 # CADRE MÉTHODOLOGIQUE DE RECHERCHE
 
-Dans ce chapitre, nous allons présenter le cadre méthodologique de l’ensemble de la démarche. On se basera sur le travail de [@hevner_2007] comme source de référence pour atteindre nos objectifs escomptés. Nous allons tout d’abord présenter notre tableau méthodologique pour donner une idée sommaire sur les activités de notre recherche dans le contexte d’une activité de design science. On expliquera brièvement le processus actuel de vérification de revenus et les besoins d’automatisations de ce dernier. On dévoilera ensuite notre solution proposée, les obstacles courus, lors de la réalisation de cette solution et les approches prises pour les contourner.
+Dans ce chapitre, nous allons présenter le cadre méthodologique de l’ensemble de la démarche. On se basera sur le travail de [@hevner_2007] comme source de référence pour atteindre nos objectifs escomptés. Nous allons tout d’abord présenter notre tableau méthodologique pour donner une idée sommaire sur les activités de notre recherche dans le contexte d’une activité de *design science*. On expliquera brièvement le processus actuel de vérification de revenus et les besoins d’automatisations de ce dernier. On dévoilera ensuite notre solution proposée, les obstacles courus, lors de la réalisation de cette solution et les approches prises pour les contourner.
 \newpage
 
 ## Étapes de notre démarche
@@ -18,9 +18,10 @@ Nous voulons réaliser une preuve de concept pour démontrer l’utilité d’un
 Le but de ce travail est de réduire au maximum les délais de traitements des demandes de crédit tout en assurant une qualité d’analyse hors pair. Ces deux axes sont d’une importance majeure considérant la marge compétitive assez mince du marché hypothécaire. Les délais de traitement influencent directement la satisfaction des clients, la qualité des souscriptions et la tolérance au risque des demandes de crédit. 
 
 Afin de quantifier la durée moyenne allouée pour le processus de vérification de l’exactitude des revenus, nous avons demandé un échantillon de cinq dossiers aléatoires par trois analystes. \newpage
-Nous avons obtenu les résultats suivants :
+Nous avons obtenu les résultats décrits dans le tableau 3.1 :
 
-\begin{table}[h]
+\begin{table}[H]
+\centering
 \caption{Temps alloué pour la confirmation des revenus}
 \begin{tabular}{|p{3cm}{c}|p{3cm}{c}|p{3cm}{l}|}
       \toprule % <-- Toprule here
@@ -46,7 +47,7 @@ Nous avons obtenu les résultats suivants :
 
 Nous savons déjà que tout le processus de confirmation de revenus en moyenne est de 18 minutes donc on peut conclure que la vérification manuelle des documents représente environ 85 % du sous-processus.
 Ces données ont été collectées auprès de 3 de nos 60 collègues, le traitement peut grandement varier d’un analyste de crédit à l’autre de par son expérience. 
-Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité suivant: 
+Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité, illustré à la Figure 3.2 
 
 \begin{figure}[h]
   \includegraphics{images/Sous-ProcessusAAutomatisé.png}
@@ -74,7 +75,7 @@ Nous allons itérer jusqu’à l’obtention d’un résultat majoritairement fa
 
 ### Communication de la recherche
 
-Pour conclure cette activité, nous allons communiquer les résultats au cadre de gestionnaire de l'institution financière en question sous forme de recommandations sur les solutions RPA existantes. Ce projet s’aligne avec la stratégie d’amélioration continue des processus d’affaires de la banque.
+Pour conclure cette activité, nous allons communiquer les résultats au cadre de gestionnaires de l'institution financière en question sous forme de recommandations sur les solutions RPA existantes. Ce projet s’aligne avec la stratégie d’amélioration continue des processus d’affaires de la banque.
 Les résultats seront également relatés dans un rapport d'activité qui sera fourni à un jury de l’UQAM dans le cadre de soutenance pour accéder au diplôme de maitrise.
 
 ## Sources de connaissances
@@ -82,17 +83,17 @@ Les résultats seront également relatés dans un rapport d'activité qui sera f
 Pour réaliser ce projet, j’ai dû faire plusieurs tests qui ont abouti à d’innombrables échecs et qui m’ont permis de me développer tout au long du parcours. L’expertise qui m’a été nécessaire pour finir ce projet a été acquise en utilisant plusieurs sources de connaissances. 
 La littérature regorge d’études de cas et d’articles scientifiques sur l’état de l’art des RPA, mais dans cette partie, je voulais recommander quelques sources supplémentaires que j’ai utilisées en mettant l’accent sur les livres, les tutoriels et les blogues qui ont été les plus pertinents pour mon avancement dans ce projet.
 
-Tout d’abord [@taulli_2020] m’a permis d’avoir une vue d’ensemble de l’état actuel de cette technologie. C’était une source très riche en connaissances pour m’aider à planifier et à structurer ce projet.
-Ensuite, lors du développement de L’API, la documentation de Django REST framework[^petite_note_5] était extrêmement utile et complète pour développer l’environnement virtuel des données bancaires.
+Tout d’abord, [@taulli_2020] m’a permis d’avoir une vue d’ensemble de l’état actuel de cette technologie. C’était une source très riche en connaissances pour m’aider à planifier et à structurer ce projet.
+Ensuite, lors du développement de l’API, la documentation de Django REST framework[^petite_note_5] était extrêmement utile et complète pour développer l’environnement virtuel des données bancaires.
 
 Pour le développement de la solution RPA, le site web de UiPath était ma première source d’information. UiPath offre aussi des formations gratuites[^petite_note_6] assez complètes et pour tous les niveaux.
-Enfin, toutes ces sources de connaissances n’étaient pas infaillibles et sans obstacle. Plusieurs difficultés ont été rencontrées lors du développement de la solution surtout des problèmes liés à des mises à jour des modules et des problèmes d’incompatibilité.
+Enfin, toutes ces sources de connaissances n’étaient pas infaillibles et sans obstacle. Plusieurs difficultés ont été rencontrées lors du développement de la solution, surtout des problèmes liés à des mises à jour des modules et des problèmes d’incompatibilité.
 
 [^petite_note_5]:https://www.django-rest-framework.org/tutorial/quickstart/
 [^petite_note_6]:https://academy.uipath.com/activity-dashboard
 
 ## Conclusion
 
-Ce chapitre avait pour but la présentation du cadre méthodologique de la recherche basée sur le *design science research*(DSR). Cette démarche est idéale pour la conception et le développement d’une solution nouvelle au problème qu’on a défini au chapitre.
+Ce chapitre avait pour but la présentation du cadre méthodologique de la recherche basée sur le *design science research*(DSR). Cette démarche est idéale pour la conception et le développement d’une solution nouvelle au problème qu’on a défini au premier chapitre.
 
 

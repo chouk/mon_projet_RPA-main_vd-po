@@ -2,8 +2,7 @@
 bibliography: bibliographie.bib
 link-citations: true
 csl: iso690-author-date-fr-no-abstract-lm.csl
-nocite: |
-  @*
+
 ---
 <!--
     Version du 2018-03-30 - Louis Martin
@@ -25,7 +24,7 @@ nocite: |
             \vfill
             par \break Oussama Chouk
             \vfill
-            Février 2022
+            Mars 2022
         }
     }
     \end{center}

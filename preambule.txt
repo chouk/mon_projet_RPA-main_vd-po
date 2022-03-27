@@ -3,6 +3,7 @@
 %
 
 
+\usepackage{enumitem}
 
 
 % Pour la prise en compte du français

@@ -1,6 +1,6 @@
-# CONCLUSION
+# CONCLUSION {-}
 
-Pour conclure ce rapport, cette recherche nous a permis de nous familiariser tout d’abord avec les RPA et avoir une bonne vue d’ensemble sur les plus grands joueurs de l’industrie. Nous avons testé aussi un aspect de la robotisation intelligente un domaine qui est encore en pleine croissance et plusieurs pistes d’amélioration.
+Pour conclure ce rapport, cette recherche nous a permis de nous familiariser tout d’abord avec les RPA et avoir une bonne vue d’ensemble sur les plus grands joueurs de l’industrie. Nous avons testé aussi un aspect de la robotisation intelligente dans un domaine qui est encore en pleine croissance et avons exploré plusieurs pistes d’amélioration.
 
 Notre solution nous a permis aussi de démontrer qu’il y a un gain considérable en automatisant la procédure de vérifications des documents de revenus. L’objectif initial était de pouvoir gagner au moins 50 % du temps de traitement des documents (environ 9 minutes). Nous nous sommes mis à l’évidence qu’on pouvait gagner la totalité du traitement des documents dans un temps considérablement court, peu importe le nombre de clients à traiter dans une demande de crédit.
 
