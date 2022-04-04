@@ -99,6 +99,7 @@ pour surmonter tous les défis.
 
 <!-- Inclure ci-après les annexes -->
 
+%inclure:textes/annexe-01.md
 
 
 <!-- Inclure ci-après la bibliographie -->

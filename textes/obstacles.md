@@ -44,7 +44,7 @@ Ce module ajoutait à notre projet une nouvelle couche de complexité. Après pl
 \newpage
 
 \begin{table}[H]
-\caption{Tableau de contraintes de \textit{UiPath Document Understanding} }
+\caption{Tableau de contraintes de UiPath \textit{Document Understanding} }
 \begin{spacing}{1.5}
 \begin{tabular}{|p{3cm}|p{5cm}|p{5cm}|}
       \toprule 
@@ -58,9 +58,9 @@ Ce module ajoutait à notre projet une nouvelle couche de complexité. Après pl
             L’API de la version communautaire nous permettait de traiter deux pages à la fois &
             Pour les T4 cela ne posait pas de problème. Nous nous contentons de charger uniquement les deux premières pages des ADC. Toute l’information pertinente est disponible dans ces pages. \\ \midrule
         \flushleft \textit{Classifier} n’arrive plus à détecter le bon type de documents    & 
-            Nous avons changé certains types de valeurs pour les besoins d’analyse. Cela a causé des problèmes avec la classification & Nous avons dû recréer le \textit{Classify document scope} le message d’erreur n’était pas pointu pour nous aider à comprendre l’erreur\\ \midrule
+            Nous avons changé certains types de valeurs pour les besoins d’analyse. Cela a causé des problèmes avec la classification & Nous avons dû changer le type de classificateur de \textit{Intelligent Keyword Classifier} à \textit{Keyword Based Classifier} et de recréer le fichier classifier.json dans le \textit{Classify document scope} (Voir annexe)\\ \midrule
         \flushleft Module très grand en fonctionnalité avec une documentation restreinte & 
-           Nous avons eu plusieurs messages d’erreurs qu’on ne pouvait pas débogués et dont la documentation était très large &
+           Nous avons eu plusieurs messages d’erreur que nous ne pouvions pas déboguer et dont la documentation était très large &
             Nous avons dû adapter des exemples testés sur des chaines YouTube et les adapter à nos besoins \\ \midrule
       \bottomrule 
     \end{tabular}
@@ -76,9 +76,10 @@ Cette étape semblait être facile au début. Nous avions déjà fait les plus g
 Nous avons aussi dû changer les types des valeurs enregistrées pour pouvoir faire des calculs ensuite.
 Ceci représente les traitements qui ont été ajoutés dans une phase ultérieure lors de la lecture des documents.
 
-~~~ {#code_2 .vba numbers=left caption="Exemple de code en VB pour traiter les données"}
+
+\begin{lstlisting}[language={[Visual]Basic}, caption=Exemple de code en VB pour traiter les données]
 System.Text.RegularExpressions.Regex.Match(CurrentRow.Item("adresse").ToString.Replace(" ",""),"[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]").Value
-~~~
+\end{lstlisting}
 
 Plusieurs fois, je me suis retrouvé dans les forums de UiPath et de *Stack Overflow* (principalement pour le code VBA) pour essayer de trouver une solution ou des pistes de solutions, mais plusieurs fois je ne trouvais que des solutions de contournement qui ne répondaient pas spécifiquement à mes besoins.
 

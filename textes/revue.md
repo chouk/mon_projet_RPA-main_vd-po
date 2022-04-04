@@ -23,8 +23,10 @@ Parmi ces enjeux les plus importants, on peut citer :
 - La vie privée : que ce soit l’industrie alimentaire, les banques ou les épiceries, ces entités se transforment progressivement en entreprises technologiques. Passant au numérique, toutes ces compagnies génèrent un volume considérable de données [@Pappas_2018]. Les utilisateurs s’interrogent de plus en plus sur l’usage de leurs données privées et si ces compagnies n’en savent pas un peu trop sur eux [@Reinartz_2019].
 - Employabilité : de nombreux spécialistes se préoccupent du fait que l’IA pourrait engendrer un chômage de masse (en raison d’une automatisation croissante des emplois), même s’il faut quelque peu tempérer ces craintes. Selon [@Frey_2017] 47 % des tâches seront automatisées. Les analystes sont d’accord sur les changements structuraux du marché de travail. La polarisation de l’emploi décrit un changement dans le marché de travail, où les emplois qualifiés sont évidés et une augmentation d’une manière disproportionnée des emplois à faibles ou très hautes qualifications [@Hirschi_2018].
 
-Même si cela semble inquiétant pour certains, plusieurs exemples récents d’entreprises qui investissent massivement dans l’IA et l’automatisation constatent que les innovations, les plus efficientes et les plus rentables sont les résultats d’une collaboration humains-machines. [@ref2]
+Même si cela semble inquiétant pour certains, plusieurs exemples récents d’entreprises qui investissent massivement dans l’IA et l’automatisation constatent que les innovations, les plus efficientes et les plus rentables sont les résultats d’une collaboration humains-machines[^petite_note_7]. 
 Cela démontre l’intérêt et l’émergence des RPA dans cette dernière décennie.
+
+[^petite_note_7]:https://www.businessmodelsinc.com/machines/
 
 ## L’automatisation robotisée des processus
 
