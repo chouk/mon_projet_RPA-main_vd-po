@@ -7,6 +7,7 @@ $$ Erreurs\ Detectees = \frac{\sum Valeurs\ Correctement\ Detectees}{\sum Elemen
 
 Le tableau ci-dessous représente les résultats des tests :
 
+\newpage
 \begin{table}[H]
 \begin{singlespacing}
 \caption{Tableau des résultats de la recherche} 			\centering

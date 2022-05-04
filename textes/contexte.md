@@ -26,12 +26,15 @@ Dans le monde des affaires, il ne faut pas faire de compromis sur la vitesse, l�
 Cependant, la confirmation des revenus, à ce jour, est traitée d’une façon manuelle. La révision des documents historiques (avis de cotisations, T4, etc.) et des documents courants (talons de paies, dépôts directs, lettre d’emploi, etc.) demande une très bonne compréhension des lois fiscales et des procédés qui règlementent le marché.
 
 \blandscape
-
-![Le processus d'analyse de dossier de crédit dans la compagnie XYZ](images/ProcessusAnalyseCrédit.png) 
-
+\begin{figure}[H]
+  \centering
+  \includegraphics{images/ProcessusAnalyseCrédit.png}
+ \caption{Le processus d'analyse de dossier de crédit dans la compagnie XYZ}
+ \label{fig:processus}
+\end{figure}
 \elandscape
 
-Le processus BPMN illustré dans la figure 1.1 montre les tâches routinières à effectuer pour s’assurer en premier lieu de l’exactitude des informations (exemples : même numéro d’assurance sociale, même adresse...). L’analyste de crédit doit faire attention aux signes potentiels de fraudes dans ces documents : l’usage de différentes polices de caractères, fautes d’orthographe, dépôts suspects aux guichets, etc.
+Le processus BPMN illustré dans la figure \ref{fig:processus} montre les tâches routinières à effectuer pour s’assurer en premier lieu de l’exactitude des informations (exemples : même numéro d’assurance sociale, même adresse...). L’analyste de crédit doit faire attention aux signes potentiels de fraudes dans ces documents : l’usage de différentes polices de caractères, fautes d’orthographe, dépôts suspects aux guichets, etc.
 
 En deuxième étape, l’analyste de crédit doit s’assurer que les sources de revenus courantes sont vérifiables et s’alignent avec les revenus historiques. Cette tâche va permettre de dresser le profil général du client et d’analyser le caractère raisonnable de la demande. Exemple : S’il existe un écart considérable entre le revenu d’emploi courant et celui des années précédentes, est-ce qu’il existe une justification à cela (exemple : prestations d’invalidité temporaire).  
 On essaye ainsi de comprendre la situation financière des clients et de s’assurer qu’ils ont une capacité financière suffisante à servir la dette.

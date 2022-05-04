@@ -1,26 +1,32 @@
 # SOLUTION PROPOSÉE
 
 Dans ce chapitre, nous allons présenter la solution proposée afin de répondre à nos objectifs de recherche. En premier lieu, nous allons expliquer les contraintes technologiques qu’on a dû contourner pour la continuité du projet. Ensuite, nous allons dévoiler nos critères de sélection de la solution RPA. Finalement, nous allons présenter les séquences nécessaires pour appliquer l’approche RPA à notre preuve de concept.
-
 Nous avons déjà ciblé le sous-processus à automatiser dans notre phase de planification. Nous estimons que nous pouvons éliminer une grande partie de l’intervention manuelle dans la vérification des documents de revenus, pour obtenir le sous-processus souhaité suivant :
 
-![Sous-processus souhaité](images/Sous-ProcessusSouhaité.png)
+\begin{figure}[H]
+  \centering
+  \includegraphics{images/Sous-ProcessusSouhaité.png}
+ \caption{Sous-processus souhaité}
+\end{figure}
 
-Nous savons déjà que l'un des avantages majeurs des RPA c’est la possibilité de déploiement des robots sans impact sur l’infrastructure technologique des institutions. Cela représente le premier grand défi de ce projet.  Ce défi consiste à développer des robots dans un environnement complètement isolé des systèmes TI d'une banque, mais lors du déploiement nous allons n’avoir aucun problème à les intégrer et à les faire fonctionner. En d'autres termes comment peut-on tester les robots sans avoir accès aux systèmes d’informations bancaires?
-
+Nous savons déjà que l'un des avantages majeurs des RPA c’est la possibilité de déploiement des robots sans impact sur l’infrastructure technologique des institutions. Cela représente le premier grand défi de ce projet.  Ce défi consiste à développer des robots dans un environnement complètement isolé des systèmes TI d'une banque, mais lors du déploiement nous allons n’avoir aucun problème à les intégrer et à les faire fonctionner. En d'autres termes comment peut-on tester les robots sans avoir accès aux systèmes d’informations bancaires? \break \break
 Pour contourner ce défi, nous avons développé une (Interface Programmable) API qui va fournir les données bancaires nécessaires pour nos tests. Avec cette API, nous allons créer un environnement virtuel où les robots peuvent agir et effectuer les tâches routinières d'analyse des preuves de revenus.
 
 ## Simulation des données bancaires
 
 Toutes les solutions testées lors de la phase de planification offraient des modules ou des connecteurs à des bases de données. Cependant, dans un scénario réel, un analyste de crédit interroge les informations d’un client par l'intermédiaire d'une application web. Donc pour simuler cet environnement, nous avons développé une API. Il faut souligner que le but initial de cette démarche est de créer un environnement qui nous permettra de tester les robots. Lors du déploiement, ces derniers vont devoir interagir avec l'application web actuelle de l’entreprise. 
-
-Selon les besoins d'affaires, une application de crédit peut avoir jusqu’à 4 clients: un demandeur principal, un conjoint et 2 codemandeurs pour supporter la demande. 
-
+Selon les besoins d'affaires, une application de crédit peut avoir jusqu’à 4 clients: un demandeur principal, un conjoint et deux codemandeurs pour supporter la demande. \break \break
 Considérant nos connaissances académiques du langage Python, mais aussi les modules clés en main reconnus de Django, ce dernier fut notre outil de préférence pour cette étape.
-Django utilise une architecture MVC (Modèle-vue-contrôleur).
-Django RESTFramework est un module supplémentaire à installer et qui nous permettra de chercher facilement les données et les transformer sous format JSON (Serializer). Voir le résultat final de la vue de la liste des clients obtenu illustré dans la figure 4.2 \break
+Django utilise une architecture MVC (Modèle-vue-contrôleur). Voir annexe \ref{lst:model}.
+Django REST Framework est un module supplémentaire à installer et qui nous permettra de chercher facilement les données et les transformer sous format JSON *Serializer* (Annexe \ref{lst:serialiser}). Voir le résultat final de la vue de la liste des clients obtenu illustré dans la figure \ref{lst:API} \newpage
 
-![Liste des clients](images/API.png)
+\begin{figure}[H]
+  \centering
+  \includegraphics{images/API.png}
+ \caption{Liste des clients}
+  \label{lst:API}
+\end{figure}
+
 
 \newpage
 
@@ -123,7 +129,7 @@ Pour atteindre cet objectif, il fallait importer le module **WebAPI** dans notre
 
 Ensuite, nous allons refaire les mêmes étapes décrites pour chercher les informations relatives aux clients. Car, pour chaque dossier de crédit, le nombre de clients est variable.
 Quand les objets JSON relatifs aux clients sont récupérés, nous allons assigner chaque valeur récupérée à une cellule spécifique d’un tableau de données.
-Cette séquence retourne ce tableau à la séquence principale comme argument pour la suite du processus.
+Cette séquence retourne ce tableau à la séquence principale comme argument pour la suite du processus (Voir annexe pour le détail de la séquence).
 
 ### La Comparaison des données 
 

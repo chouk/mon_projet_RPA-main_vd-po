@@ -6,6 +6,7 @@ Dans ce chapitre, nous allons présenter le cadre méthodologique de l’ensembl
 ## Étapes de notre démarche
 
 \begin{figure}[H]
+  \centering
   \includegraphics{images/Sommaire.PNG}
   \caption{Aperçu méthodologique}
 \end{figure}
@@ -47,11 +48,12 @@ Nous avons obtenu les résultats décrits dans le tableau 3.1 :
 
 Nous savons déjà que tout le processus de confirmation de revenus en moyenne est de 18 minutes donc on peut conclure que la vérification manuelle des documents représente environ 85 % du sous-processus.
 Ces données ont été collectées auprès de 3 de nos 60 collègues, le traitement peut grandement varier d’un analyste de crédit à l’autre de par son expérience. 
-Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité, illustré à la Figure 3.2 
+Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité, illustré à la Figure \ref{fig:sousprocesus}
 
 \begin{figure}[h]
   \includegraphics{images/Sous-ProcessusAAutomatisé.png}
   \caption{Sous-processus visé}
+  \label{fig:sousprocesus}
 \end{figure}
 
 \newpage
@@ -59,8 +61,7 @@ Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin 
 ### Raffinement méthodologique
 
 Les trois plus grands fournisseurs de système RPA sont *Blue Prism*, *Automation Anywhere* et *UiPath*. Il existe aussi des compagnies récentes sur le marché, de sérieux concurrents, comme NICE et Pegasystems, sans oublier les solutions de logiciels libres comme Robot Framework, Robocorp, TagUI etc. Chaque solution vient avec sa liste d’avantages et inconvénients. Certaines requièrent de bonnes connaissances de langages de programmation, exemple : C#, d’autres requièrent un minimum de code possible.
-À cette étape, nous allons comparer les solutions RPA existantes pour définir une liste d’avantages et inconvénients, puis nous sélectionnerons les solutions qui conviennent au mieux à nos objectifs de recherches. Nous nous limiterons dans le cadre de cette recherche aux trois premières compagnies du classement de Gartner  comme solutions payantes et Robot Framework  comme solution de logiciel libre.
-
+À cette étape, nous allons comparer les solutions RPA existantes pour définir une liste d’avantages et inconvénients, puis nous sélectionnerons les solutions qui conviennent au mieux à nos objectifs de recherches. Nous nous limiterons dans le cadre de cette recherche aux trois premières compagnies du classement de Gartner  comme solutions payantes et Robot Framework  comme solution de logiciel libre. \break
 Considérant les enjeux de sécurité importants pour les documents de revenus personnels des clients, nous allons créer un cadre de développement virtuel *sandbox*. Le but est de créer un répertoire infonuagique dans lequel on va stocker des preuves de revenus fictives.
 Enfin nous allons concevoir une application web qui va simuler le point d’accès aux profils des clients. Ces informations sont les données collectées lors de l’ouverture d’un compte bancaire par les canaux de ventes.
 

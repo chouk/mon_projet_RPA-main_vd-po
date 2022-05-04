@@ -31,9 +31,9 @@ Modules utilisés pour la création de l’API
 
 Nous avons choisi Django REST framework pour sa flexibilité et sa facilité d'usage.
 
-### Exemple de listing
+### Modèle de données
 
-~~~ {#code_1 .python numbers=left caption="Création des modèles de données"}
+\begin{lstlisting}[language=Python, caption=Création des \textit{data models}, label={lst:model}]
 from django.db import models
 
 class Application(models.Model):
@@ -78,9 +78,11 @@ class Client(models.Model):
         unique_together = ['code_demande', 'type_client']
     def __str__(self):
         return self.nom + ' ' + self.prenom
-~~~
+\end{lstlisting}
 
-\begin{lstlisting}[language=Python, caption=Création des \textit{serializers}]
+### Exemple de *Serializer*
+
+\begin{lstlisting}[language=Python, caption=Création des \textit{serializers}, label={lst:serialiser}]
 from rest_framework import serializers
 from .models import Application
 from .models import Client
@@ -120,4 +122,5 @@ class ClientSerializer(serializers.HyperlinkedModelSerializer):
             'nas',
             'date_de_naissance',
             'salaire',)
+
 \end{lstlisting}

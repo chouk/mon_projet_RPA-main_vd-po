@@ -48,17 +48,19 @@ Bien qu’il soit récent, ce type d’automatisation est progressivement utilis
 
 Lorsqu’elle est implémentée de manière appropriée (c.-à-d. des règles bien définies qui s’alignent avec le processus d’affaires), la RPA présente aussi plusieurs avantages aux collaborateurs :
 En remplaçant les humains par des robots pour effectuer des travaux répétitifs, les  travailleurs peuvent se concentrer sur les tâches les plus importantes qui impliquent de l’analyse critique et la gestion des exceptions, la satisfaction au travail ainsi que la rétention des employés augmentent [@slaby_2012]. Le maintien et le contrôle de ces robots permettent aussi de créer de nouvelles opportunités d’emploi [@asatiani_2016]. \break
-L'étude de cas élaborée par Lacity et al. (2015) chez *Telefónica* a présenté un modèle très intéressant (Figure 2.1) pour mettre en contexte les besoins d’automatisation et qui s’aligne avec le modèle établi par Frey, Osborne(2017).
+L'étude de cas élaborée par Lacity et al. (2015) chez *Telefónica* a présenté un modèle très intéressant (Figure \ref{fig:lacity}) pour mettre en contexte les besoins d’automatisation et qui s’aligne avec le modèle établi par Frey, Osborne(2017).
 
-
-![La bande automatisable [@lacity_2015][^petite_note_4]](images/Telefonica.PNG) 
-
+\begin{figure}[H]
+  \centering
+  \includegraphics{images/Telefonica.PNG}
+ \caption{La bande automatisable (Lacity et al., 2015)}
+ \small\textsuperscript{Interprété de l’étude de cas chez \textit{Telefónica}} 
+ \label{fig:lacity}
+\end{figure}
 
 L’expérience démontre qu’il est plus approprié d’automatiser les processus routiniers simples à grand volume, plus la complexité des tâches augmente plus ça devient difficile d’implémenter une RPA [@leshob_2020; @lacity_2015]. L’humain est capable de prendre de petites décisions qui se basent sur le gros bon sens. Dans le cas des automates, il faut explicitement définir les règles de contrôle. En d’autres termes, le manque de compétences cognitives nécessite des règles plus rigoureuses afin d’exécuter ces tâches avec succès. Si le processus contient beaucoup d’exceptions, il doit être remis aux travailleurs [@santos_2019]. Pour réussir l’implémentation d’automatisations, une bonne compréhension des règles et du *workflow* est donc indispensable.
 
 La RPA est aussi une solution temporaire pour automatiser les processus basés sur les systèmes légataires. À long terme, il serait peut-être plus approprié de mettre fin aux SI légataires et d’en reconstruire de nouveaux [@asatiani_2016].
-
-[^petite_note_4]:Interprété de l’étude de cas chez *Telefónica*
 
 ## L’automatisation intelligente des processus ou RPA 2.0
 

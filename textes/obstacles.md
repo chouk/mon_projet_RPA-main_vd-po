@@ -7,7 +7,7 @@ Dans ce chapitre, nous allons présenter trois principaux obstacles lors du dév
 Le premier obstacle rencontré lors de la création de cette solution est l’environnement du développement lui-même. Ce n'est pas un secret que l’industrie bancaire en général est extrêmement exigeante sur les enjeux de sécurité. Ajoutons à cela les multiples fuites de données qui ont été commises ces dernières années, rendant la tâche de plus en plus difficile. Pour cette raison, nous avons créé un environnement complètement indépendant pour tester les fonctionnalités de notre solution.  Ces robots doivent imiter le travail des analystes de crédit sans être liés à l'architecture existante du processus et sans la modifier. Nos tests nous ont permis de délimiter les contraintes et les limites de notre robot et d’imaginer une nouvelle façon de faire les choses pour une meilleure expérience employé.
 
 Le tableau suivant est un sommaire des difficultés rencontrées lors de cette étape ainsi que les solutions fournies:
-
+\newpage
 \begin{table}[H]
 \caption{Tableau de contraintes du développement de l'API }
 \begin{spacing}{1.5}
@@ -18,7 +18,7 @@ Le tableau suivant est un sommaire des difficultés rencontrées lors de cette �
       \midrule 
     	\flushleft Compatibilité avec Django REST FRAMEWORK (DRF) & 
            La version Django 3.1 présente des problèmes de compatibilité avec DRF 3.11 & 
-           Au début, nous avons dû revenir à une version plus ancienne pour résoudre ce problème mais avec la nouvelle mise à jour 3.12.4, cela a été résolu  (voir annexe pour la liste des modules) \\ \midrule 
+           Au début, nous avons dû revenir à une version plus ancienne pour résoudre ce problème mais avec la nouvelle mise à jour 3.12.4, cela a été résolu  (Voir annexe A.1. pour la liste des modules) \\ \midrule 
         \flushleft Compatibilité avec le module Psycopg2 & 
             La migration vers la base de données génère des problèmes d’incompatibilité dus à l’adaptateur Psycopg2, conçu pour faire le lien entre notre modèle de données et une base POSTGRES &
             Utilisation de SQLlite3 en réseau local, puis utiliser l’adaptateur psycopg2-binary pour utiliser une base de données PostgreSQL en nuage \\ \midrule
@@ -58,7 +58,7 @@ Ce module ajoutait à notre projet une nouvelle couche de complexité. Après pl
             L’API de la version communautaire nous permettait de traiter deux pages à la fois &
             Pour les T4 cela ne posait pas de problème. Nous nous contentons de charger uniquement les deux premières pages des ADC. Toute l’information pertinente est disponible dans ces pages. \\ \midrule
         \flushleft \textit{Classifier} n’arrive plus à détecter le bon type de documents    & 
-            Nous avons changé certains types de valeurs pour les besoins d’analyse. Cela a causé des problèmes avec la classification & Nous avons dû changer le type de classificateur de \textit{Intelligent Keyword Classifier} à \textit{Keyword Based Classifier} et de recréer le fichier classifier.json dans le \textit{Classify document scope} (Voir annexe)\\ \midrule
+            Nous avons changé certains types de valeurs pour les besoins d’analyse. Cela a causé des problèmes avec la classification & Nous avons dû changer le type de classificateur de \textit{Intelligent Keyword Classifier} à \textit{Keyword Based Classifier} et de recréer le fichier classifier.json dans le \textit{Classify document scope} (Voir annexe \ref{fig:extraction})\\ \midrule
         \flushleft Module très grand en fonctionnalité avec une documentation restreinte & 
            Nous avons eu plusieurs messages d’erreur que nous ne pouvions pas déboguer et dont la documentation était très large &
             Nous avons dû adapter des exemples testés sur des chaines YouTube et les adapter à nos besoins \\ \midrule

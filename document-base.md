@@ -24,7 +24,7 @@ csl: iso690-author-date-fr-no-abstract-lm.csl
             \vfill
             par \break Oussama Chouk
             \vfill
-            Mars 2022
+            Avril 2022
         }
     }
     \end{center}
@@ -100,6 +100,7 @@ pour surmonter tous les défis.
 <!-- Inclure ci-après les annexes -->
 
 %inclure:textes/annexe-01.md
+%inclure:textes/annexe-02.md
 
 
 <!-- Inclure ci-après la bibliographie -->
