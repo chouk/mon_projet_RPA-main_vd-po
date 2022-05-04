@@ -24,10 +24,10 @@ Nous avons obtenu les résultats décrits dans le tableau 3.1 :
 \begin{table}[H]
 \centering
 \caption{Temps alloué pour la confirmation des revenus}
-\begin{tabular}{|p{3cm}{c}|p{3cm}{c}|p{3cm}{l}|}
+\begin{tabular}{|p{2cm}{c}|p{3cm}{c}|p{4cm}{l}|}
       \toprule % <-- Toprule here
 	\rowcolor{\couleurtable}
-      \textbf{Applications} & \bfseries Nombre de demandeurs & \textbf{Temps alloué}\\
+      \textbf{Applications} & \bfseries Nombre de demandeurs & \textbf{Temps alloué en minutes}\\
       \midrule % <-- Midrule here
     1 & 2 & 28 \\ \midrule
     2 & 2 & 12 \\ \midrule
@@ -48,7 +48,7 @@ Nous avons obtenu les résultats décrits dans le tableau 3.1 :
 
 Nous savons déjà que tout le processus de confirmation de revenus en moyenne est de 18 minutes donc on peut conclure que la vérification manuelle des documents représente environ 85 % du sous-processus.
 Ces données ont été collectées auprès de 3 de nos 60 collègues, le traitement peut grandement varier d’un analyste de crédit à l’autre de par son expérience. 
-Nous espérons réduire ce temps de traitement de moitié dans 90% des cas afin d’obtenir le sous-processus souhaité, illustré à la Figure \ref{fig:sousprocesus}
+Nous espérons réduire ce temps de traitement de trois quarts dans 90% des cas afin d’obtenir le sous-processus souhaité, illustré à la Figure \ref{fig:sousprocesus}
 
 \begin{figure}[h]
   \includegraphics{images/Sous-ProcessusAAutomatisé.png}

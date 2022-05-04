@@ -12,7 +12,7 @@ Par conséquent, la bonne compréhension des sources de revenus des demandeurs e
 
 Cette constante évolution du marché de la dette exige des institutions financières une constante réflexion d’ordre managérial, produit et opérationnel sur l’innovation. Au cours des dernières années, diverses acquisitions et fusions ont eu lieu, ce qui a entraîné une augmentation de la concurrence dans les services financiers.
 
-L’adoption de l’automatisation robotisée des processus(RPA) se fait de plus en plus sentir dans les opérations bancaires. En effet, les dépenses de RPA dans les services bancaires et financiers étaient estimées à 200 millions de dollars en 2018 et on estime une augmentation à 1,2 milliard de dollars en 2023 [@gregoryscott].
+L’adoption de l’automatisation robotisée des processus (RPA) se fait de plus en plus sentir dans les opérations bancaires. En effet, les dépenses de RPA dans les services bancaires et financiers étaient estimées à 200 millions de dollars en 2018 et on estime une augmentation à 1,2 milliard de dollars en 2023 [@gregoryscott].
 
 [^petite_note_1]:www150.statcan.gc.ca/t1/tbl1/en/cv.action?pid=3810023801
 [^petite_note_2]:ici.radio-canada.ca/nouvelle/1123866/crise-financiere-2008-faillite-lehman-brothers-subprimes-bulle-immobiliere-etats-unis-dette-surendettement
@@ -36,12 +36,12 @@ Cependant, la confirmation des revenus, à ce jour, est traitée d’une façon 
 
 Le processus BPMN illustré dans la figure \ref{fig:processus} montre les tâches routinières à effectuer pour s’assurer en premier lieu de l’exactitude des informations (exemples : même numéro d’assurance sociale, même adresse...). L’analyste de crédit doit faire attention aux signes potentiels de fraudes dans ces documents : l’usage de différentes polices de caractères, fautes d’orthographe, dépôts suspects aux guichets, etc.
 
-En deuxième étape, l’analyste de crédit doit s’assurer que les sources de revenus courantes sont vérifiables et s’alignent avec les revenus historiques. Cette tâche va permettre de dresser le profil général du client et d’analyser le caractère raisonnable de la demande. Exemple : S’il existe un écart considérable entre le revenu d’emploi courant et celui des années précédentes, est-ce qu’il existe une justification à cela (exemple : prestations d’invalidité temporaire).  
+En deuxième étape, l’analyste de crédit doit s’assurer que les sources de revenus courantes sont vérifiables et s’alignent avec les revenus historiques. Cette tâche va permettre de dresser le profil général du client et d’analyser le caractère raisonnable de la demande. Exemple : S’il existe un écart considérable entre le revenu d’emploi courant et celui des années précédentes, est-ce qu’il existe une justification à cela (exemple : prestations d’invalidité temporaire)?  
 On essaye ainsi de comprendre la situation financière des clients et de s’assurer qu’ils ont une capacité financière suffisante à servir la dette.
 Ces tâches sont la partie la plus fastidieuse dans l’analyse d’une application de crédit hypothécaire. La demande est généralement soumise par un à quatre codemandeurs avec des types de revenus différents (Salarié, travailleur autonome, retraité, etc.).
 
 Une étude faite en recensant les données opérationnelles chez 5 analystes de crédit à l'institution financière [^petite_note_3] a montré qu’en moyenne ça prend 45 minutes pour la révision d’un dossier de crédit et 40 % de ce temps alloué pour la révision des sources de revenus. Ce qui représente:
-$$ 45min * 40\% =  \frac{18\ minutes}{application} $$
+$$ 45min * 40\% =  18\ minutes\/application $$
 L’automatisation de cette étape de traitement aura un effet domino sur tout le processus. Un analyste fait en moyenne 8 dossiers par jour, aura un gain total de: 
 $$ 8 * 18\ minutes = 144\ minutes\ ou\ bien\ \frac{144}{45}=3,2\ dossiers\ supplementaires$$
 Ainsi, pour un centre de 60 analystes, ceci représente une capacité supplémentaire de 192 dossiers traités/jour. 
@@ -55,16 +55,15 @@ Comment intégrer l'approche RPA pour réduire les tâches routinières de confi
 Cette question est indispensable à l’amélioration de l’expérience client. En effet, les clients veulent que leurs demandes soient traitées toujours plus rapidement et exigent un service de plus en plus optimal. En plus, cela améliorera la gestion des tâches routinières.\break
 Pour nous aider à développer un artéfact qui s’aligne avec cette question, on va explorer les innovations acquises en « Traitement intelligent des documents » et son application en RPA. Les sous-questions suivantes ont été développées:
 \begin{itemize}
-\item I. Quelles sont les options d'automatisations offertes ? 
+\item I. Quelles sont les options d'automatisation offertes ? 
 \item II. Comment intégrer les robots intelligents dans le processus courant?
 \end{itemize}
 [^petite_note_3]:Pour des raisons de confidentialité, nous allons omettre de mentionner le nom de cette banque canadienne.
 
 ## Objectifs de recherche
 
-L’objectif de ce travail de recherche est de concevoir et développer un artéfact pour le traitement intelligent des documents qui sera adapté au système bancaire canadien et qui aidera à réinventer le processus de traitement des applications de crédit.
-Cela relève d’une bonne compréhension de l'approche RPA d’une manière générale et, en particulier, l’application du *machine learning* pour le traitement automatisé des documents de revenus.\break
-Pour atteindre cet objectif, on va commencer par définir un cadre de travail qui favorise l’implémentation de l’artéfact. Une recherche sur les facteurs de succès pour l’implémentation d’un RPA sera ainsi définie. Ensuite, on regardera les options offertes actuellement pour le traitement de documents, où une approche couts-bénéfices sera dressée.\break
+L’objectif de ce travail de recherche est de concevoir et développer un artéfact pour le traitement automatique et intelligent des documents qui sera adapté au système bancaire canadien et qui aidera à réinventer le processus de traitement des applications de crédit.\break
+Pour atteindre cet objectif, on va commencer par définir un cadre de travail qui favorise la conception et le développement de l’artéfact. Une recherche sur les facteurs de succès pour l’implémentation d’un RPA sera ainsi définie. Ensuite, on regardera les options offertes actuellement pour le traitement de documents, où une approche couts-bénéfices sera dressée.\break
 On développera par la suite un artéfact qui sera soutenable à l’industrie bancaire canadienne et qui prendra en charge l’implémentation de l’expertise d’un analyste de crédit pour automatiser les tâches routinières de la confirmation des revenus.\break
 La démarche employée est le *design science* selon les trois boucles d’activités : rigueur, pertinence et design [@hevner_2007].
 

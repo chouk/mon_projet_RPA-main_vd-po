@@ -2,7 +2,7 @@
 
 Dans ce chapitre, nous allons présenter trois principaux obstacles lors du développement de notre robot ainsi que les solutions appliquées pour les contourner. Premièrement, nous allons présenter les défis liés à l’environnement de développement. Ensuite, nous allons donner une vue d’ensemble sur les problématiques liées à la lecture des documents pour finir avec les obstacles dans la comparaison des valeurs.
 
-## L'environement de développement et la création de l'API
+## L'environnement de développement et la création de l'API
 
 Le premier obstacle rencontré lors de la création de cette solution est l’environnement du développement lui-même. Ce n'est pas un secret que l’industrie bancaire en général est extrêmement exigeante sur les enjeux de sécurité. Ajoutons à cela les multiples fuites de données qui ont été commises ces dernières années, rendant la tâche de plus en plus difficile. Pour cette raison, nous avons créé un environnement complètement indépendant pour tester les fonctionnalités de notre solution.  Ces robots doivent imiter le travail des analystes de crédit sans être liés à l'architecture existante du processus et sans la modifier. Nos tests nous ont permis de délimiter les contraintes et les limites de notre robot et d’imaginer une nouvelle façon de faire les choses pour une meilleure expérience employé.
 

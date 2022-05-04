@@ -7,7 +7,7 @@ DSR
   ~ *Design science research*
 
 IA
-  ~ Intelligence artificelle
+  ~ Intelligence artificielle
 
 IPA
   ~ *Intelligent process automation* 

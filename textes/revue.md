@@ -1,11 +1,11 @@
 # REVUE DE LITTÉRATURE
 
-Dans ce chapitre, on va présenter le concept de la transformation numérique comme garant de survie des entreprises. Ensuite, on va établir les caractéristiques distinctives de cette transormation. Enfin, on abordera une facette de cette transformation que sont les RPA, on établira la liste des avantages et des inconvénients pour finir avec les opportunités futures que l’intégration de l’intelligence artificielle (IA) peut apporter.
+Dans ce chapitre, on va présenter le concept de la transformation numérique comme garant de survie des entreprises. Ensuite, on va établir les caractéristiques distinctives de cette transformation. Enfin, on abordera une facette de cette transformation que sont les RPA, on établira la liste des avantages et des inconvénients pour finir avec les opportunités futures que l’intégration de l’intelligence artificielle (IA) peut apporter.
 
 ## La transformation numérique
 
 La technologie fusionne de plus en plus avec le quotidien des humains. Les frontières s’estompent entre l’ensemble physique, numérique et biologique [@Schwab_2014] comme les voitures autonomes, la reconnaissance biométrique ou le diagnostic médical assisté par IA. Ces innovations technologiques prennent de plus en plus d’importance dans nos vies.
-Schwab, K (2014) considère la transformation numérique comme la quatrième révolution industrielle. Il identifie trois axes (La vitesse, l’ampleur et l’impact sociétal) qui caractérisent cette révolution.
+Schwab, K (2014) considère la transformation numérique comme la quatrième révolution industrielle. Il identifie trois axes (la vitesse, l’ampleur et l’impact sociétal) qui caractérisent cette révolution.
 
 ### Vitesse
 
@@ -30,7 +30,7 @@ Cela démontre l’intérêt et l’émergence des RPA dans cette dernière déc
 
 ## L’automatisation robotisée des processus
 
-Parmi les multiples facettes de la transformation numérique on va se concentrer sur le RPA car tel qu’était établi précédemment on ne peut parler de transformation numérique sans la numérisation des données, d’où viennent les besoins des RPA [@Leopold_2018].
+Parmi les multiples facettes de la transformation numérique, on va se concentrer sur le RPA car tel qu’était établi précédemment. On ne peut parler de transformation numérique sans la numérisation des données, d’où viennent les besoins des RPA [@Leopold_2018].
 
 Dans son livre *The Robotic Process Automation Handbook* [@taulli_2020], Tom Taulli énumère trois versions de RPA, ce qui représente trois grandes évolutions dans l’histoire de cette technologie :
 \begin{enumerate} 
@@ -38,7 +38,7 @@ Dans son livre *The Robotic Process Automation Handbook* [@taulli_2020], Tom Tau
 \item RPA non supervisé : représente la deuxième génération de RPA. Celle-ci peut effectuer des tâches d’une façon autonome. Les robots sont déclenchés avec des événements et leurs exécutions sont indépendantes de toute intervention humaine. 
 \item RPA intelligent : \textit{Intelligent process automation} (IPA) est la plus récente génération de RPA. Le logiciel utilise sa propre intelligence pour prendre des décisions sur l’exécution des tâches. Exemple : l’apparition de la lecture intelligente des documents.
 \end{enumerate}
-Le RPA a suscité énormément d’intérêts ces deux dernières années. Cette approche est en train de révolutionner notre milieu de travail. Dans sa forme la plus simple, c’est l’implémentation de robots logiciels pour interagir avec multiples systèmes d’informations d’une entreprise. Avec une série d’instructions, on peut déléguer les tâches fastidieuses et répétitives à un robot et libérer ainsi les ressources humaines (les travailleurs) pour consacrer leurs efforts aux tâches à valeur ajoutée. Exemple : extraire des données, remplir des formulaires ou contrôler des processus [@anagnoste_2017].
+La RPA a suscité énormément d’intérêts ces deux dernières années. Cette approche est en train de révolutionner notre milieu de travail. Dans sa forme la plus simple, c’est la conception n de robots logiciels pour interagir avec multiples systèmes d’informations d’une entreprise. Avec une série d’instructions, on peut déléguer les tâches fastidieuses et répétitives à un robot et libérer ainsi les ressources humaines (les travailleurs) pour consacrer leurs efforts aux tâches à valeur ajoutée. Exemple : extraire des données, remplir des formulaires ou contrôler des processus [@anagnoste_2017].
 
 Les RPA sont là pour complémenter les systèmes de gestion des processus d’affaires (BPMS, *Business process management system*) et non pour les remplacer affirme le directeur marketing de *Blue prisme* (un leader de solutions RPA) « … Les humains peuvent être redéployés vers des tâches décisionnelles. » 
 Dans un milieu de travail transactionnel à haut volume, la vitesse, la fiabilité, la cohérence et la précision sont des exigences essentielles. les RPA permettent aux entreprises de  sauver en effectif de remplacements *offshore* [@lacity_2015], d’exécuter les tâches répétitives d’une façon plus efficiente, d'améliorer la qualité du service, de réduire le délai d’exécution et d'augmenter la conformité.
@@ -62,7 +62,7 @@ L’expérience démontre qu’il est plus approprié d’automatiser les proces
 
 La RPA est aussi une solution temporaire pour automatiser les processus basés sur les systèmes légataires. À long terme, il serait peut-être plus approprié de mettre fin aux SI légataires et d’en reconstruire de nouveaux [@asatiani_2016].
 
-## L’automatisation intelligente des processus ou RPA 2.0
+## L’automatisation intelligente des processus (IPA)
 
 Présentement, il existe plusieurs approches et critères pour déterminer les tâches automatisables, des tâches à très grands volumes avec un faible degré de complexité [@asatiani_2016; @leshob_2018], selon le niveau de maturation du processus, selon les fonctions et l’industrie [@madakam_2019] etc.  
 Mais la littérature scientifique n’est pas encore décidée quant à l’intégration de RPA avec l’apprentissage machine ou l’IA. L’identité même de ces IPA n’est pas encore claire, car tout simplement, il n’existe pas assez de recherches dans ce domaine. Les IPA peuvent effectuer des automatisations plus complexes en utilisant l’IA pour ajouter cet aspect décisionnel[@chakraborti_2020]. Les tâches les plus complexes peuvent être traitées par des machines [@viehhauser_2020]. L’utilisation des capacités cognitives de l’IA sème aussi de la confusion dans les définitions. Il faut comprendre que l’IPA est tout d’abord un robot axé sur l’automatisation des processus auxquels on ajoute une couche d’intelligence sous forme d’apprentissage machine ou traitement naturel de langages [@anagnoste_2018].

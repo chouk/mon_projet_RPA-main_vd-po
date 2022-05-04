@@ -56,7 +56,7 @@ class Client(models.Model):
        ('QC', 'Québec'),
     )
     types_client = (
-    ('MAPL','Apllicant principale'),
+    ('MAPL','Apllicant principal'),
     ('JAPL','Apllicant conjoint'),
     ('COAP1','Co-Apllicant1'),
     ('COAP2','Co-Applicant2'),)

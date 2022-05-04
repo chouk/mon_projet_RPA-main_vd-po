@@ -10,7 +10,7 @@
  \caption{Solution complète Main}
 \end{figure}
 
-(1) et (2) nous permettra de déclencher le robot par la composition de *hotkey*. (3) L’utilisateur est invité à saisir le numéro de dossier. (4) la séquence **ChercherInfoClientsAPI** est invoquée pour récupérer les données clients d’un dossier de crédit. Cette séquence utilise deux arguments (entrant : numéro de dossier; sortant : table de données des clients). (5) la séquence **TéléchargerDocuments** est invoquée pour télécharger les documents de *OneDrive*. Cette séquence a besoin d’un argument (entrant : numéro de dossier). Une fois les documents sont téléchargés (6) la séquence **ComprehensionDocument** est lancé pour extraire les données de ces documents. Cette séquence retourne un argument (table de données extraites). (7) Nous faisons une jointure entre les deux tables retournées sur le NAS des clients. Cela nous permettra de créer une seule table avec toutes les données à vérifier. (8) Permettra de créer un fichier résultats. (9) Finalement, la séquence **ComparaisondesValeurs** nous permettra d’itérer sur la table de données et de comparer les valeurs ligne par ligne. Toute différence sera écrite dans le fichier résultat.
+(1) et (2) nous permettra de déclencher le robot par la composition de *hotkey*. (3) L’utilisateur est invité à saisir le numéro de dossier. (4) la séquence\break **ChercherInfoClientsAPI** est invoquée pour récupérer les données clients d’un dossier de crédit. Cette séquence utilise deux arguments (entrant : numéro de dossier; sortant : table de données des clients). (5) la séquence **TéléchargerDocuments** est invoquée pour télécharger les documents de *OneDrive*. Cette séquence a besoin d’un argument (entrant : numéro de dossier). Une fois les documents sont téléchargés (6) la séquence **ComprehensionDocument** est lancé pour extraire les données de ces documents. Cette séquence retourne un argument (table de données extraites). (7) Nous faisons une jointure entre les deux tables retournées sur le NAS des clients. Cela nous permettra de créer une seule table avec toutes les données à vérifier. (8) Permettra de créer un fichier résultats. (9) Finalement, la séquence **ComparaisondesValeurs** nous permettra d’itérer sur la table de données et de comparer les valeurs ligne par ligne. Toute différence sera écrite dans le fichier résultat.
 
 ## Connexion à l'API
 
@@ -32,7 +32,7 @@ Enfin, nous allons assigner chaque valeur soustraite (8) dans une variable tempo
  \caption{Chercher les infos des clients}
 \end{figure}
 
-Pour réaliser cette séquence, nous avons créé un tableau (1) pour stocker les informations retournées par l’API. (2) On fait ici un premier appel à l’API pour Dans ** Microsoft Office 365 Scope** (1), on a défini les accès pour pouvoir utiliser le service *OneDrive*. (2) Nous permet de trouver un dossier de crédit existant avec l’argument saisi par l’utilisateur. (3) Pour chaque fichier dans ce dossier on lance un téléchargement (4) dans le dossier local **Documents**.
+Pour réaliser cette séquence, nous avons créé un tableau (1) pour stocker les informations retournées par l’API. (2) On fait ici un premier appel à l’API pour Dans **Microsoft Office 365 Scope** (1), on a défini les accès pour pouvoir utiliser le service *OneDrive*. (2) Nous permet de trouver un dossier de crédit existant avec l’argument saisi par l’utilisateur. (3) Pour chaque fichier dans ce dossier on lance un téléchargement (4) dans le dossier local **Documents**.
 
 ## Extraction intelligente des données
 

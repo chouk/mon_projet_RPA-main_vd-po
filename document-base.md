@@ -41,7 +41,7 @@ Je voudrais remercier toutes les personnes qui m’ont supporté pour réaliser 
 
 Je voudrais remercier ma directrice de recherche, Mme Sylvie Trudel, d'avoir cru dans cette recherche et pour son appui continu. Son expertise dans le domaine m’a permis de poser les bonnes questions et d'analyser les problèmes différemment.
 
-Je tiens à remercier mon codirecteur de recherche, Mr Abderrahmane Lashhob. Ses perspectives de la technologie étaient un enjeu majeur pour l'accomplissement du projet.
+Je tiens à remercier mon codirecteur de recherche, M. Abderrahmane Lashhob. Ses perspectives de la technologie étaient un enjeu majeur pour l'accomplissement du projet.
 
 Je remercie mes collègues qui ont été curieux de voir ce projet aboutir et qui m’ont supporté avec leurs calculs et rétroactions.
 

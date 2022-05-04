@@ -83,7 +83,7 @@ Cette solution permet de découper un projet complexe en petits projets indépen
 
 Au début de notre approche, nous avons structuré la problématique comme une suite de séquences d’activités (voir la Figure 4.3).
 
-![Organigramme de séquences à executer](images/Organigramme.png)
+![Organigramme de séquences à exécuter](images/Organigramme.png)
 
 Pour résumer, la solution va tout d’abord télécharger les documents de revenus reliés à une application de crédit donnée. Ensuite, elle va faire appel à la compréhension intelligente des documents pour pouvoir distinguer entre les différents types (avis de cotisations et T4). Cela nous permettra d’extraire certaines informations ciblées dans ces documents et les stocker dans un tableau temporaire. Par la suite, nous allons chercher les informations des clients de l’API avec le numéro de dossier. La RPA devra sauvegarder les informations dans un deuxième tableau temporaire. Enfin, l’automate va faire la comparaison de l’information entre ces deux tableaux pour construire un petit rapport de résultats. 
 
@@ -112,10 +112,10 @@ Le besoin pour la lecture intelligente des documents dans notre recherche, déco
 
 Pour atteindre cet objectif assez complexe, *UiPath* a développé ce module avec 6 composants majeurs.
 
-![La compréhenison intelligente des documents](images/LecturesIntelligente.png)
+![La compréhension intelligente des documents](images/LecturesIntelligente.png)
 
 1.	Chargement de taxonomie : après l’implémentation du module, l’onglet **Gestionnaire de taxonomie** apparait dans la barre de menu et cela permet de définir le type de documents et de données vont être traités. 
-2.	Numérisation des documents : cela permet d’utiliser la reconnaissance optique des caractères pour numériser le texte. *UiPath* donne le choix d’utiliser plusieurs fournisseurs de ROC. Dans le cadre de cette recherche et au moment du développement, nous avons constaté que **OmniPage OCR** semble être le meilleur choix pour la lecture d’un texte français. 
+2.	Numérisation des documents : cela permet d’utiliser la reconnaissance optique des caractères pour numériser le texte. *UiPath* donne le choix d’utiliser plusieurs fournisseurs de ROC. Dans le cadre de cette recherche et au moment du développement, nous avons constaté que **OmniPage OCR** répondait mieux à nos besoins pour la lecture d’un texte français.
 3.	Classification des documents : On utilise ici la taxonomie déjà définie pour classer les documents selon nos besoins. *UiPath* offre ici plusieurs types de classificateurs. Pour ce projet, nous avons choisi d’utiliser un classificateur basé sur des mots-clés, car nous voulons lire des T4 et des avis de cotisations qui ont une structure statique. Mais il faut savoir qu’il est possible d’utiliser un classificateur avec des mots-clés intelligents ou un classificateur basé sur l’apprentissage machine. 
 4.	Extraction des données : pour l’extraction des données, nous avons aussi utilisé la taxonomie déjà définie dans la première étape. Pour les fins de ce projet, on a utilisé un extracteur intelligent de formulaire qui va utiliser un modèle déjà paramétré. C’est une API offerte par *UiPath* qui permet de chercher des mots dans un formulaire spécifique selon leur emplacement.
 5.	La validation des données : cette étape est optionnelle; elle permet à l’utilisateur de valider les mots extraits ou de pouvoir les modifier selon le besoin.
